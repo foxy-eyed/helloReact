@@ -1,6 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import User from './src/User';
+import Hello from './src/Hello';
 
 const customer = new User('John', 'Doe', '1990-12-12');
 
-console.log(customer.fullName());
-console.log(customer.age());
+ReactDOM.render(<Hello userName={customer.fullName()} />, document.querySelector('#app'));
