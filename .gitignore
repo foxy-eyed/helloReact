@@ -4,3 +4,7 @@ node_modules/
 # parcel-bundler related directories
 dist
 .cache
+
+# logs
+yarn-debug.log*
+yarn-error.log*
