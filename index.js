@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CatalogPage from './src/containers/CatalogPage';
-import './node_modules/bootstrap/dist/css/bootstrap.min.css';
+import App from './src/containers/App';
 
 ReactDOM.render(
-  <CatalogPage />,
+  <App />,
   document.querySelector('#app'),
 );

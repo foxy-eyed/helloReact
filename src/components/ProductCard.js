@@ -1,24 +1,32 @@
 import React from 'react';
-import Image from './Image';
+import { Card, CardBody, CardText, CardImg } from 'reactstrap';
+
+import { productPropType } from '../constants/propTypes';
 import Price from './Price';
 import TextBox from './TextBox';
+import ProductAddButton from './ProductAddButton';
 
 function ProductCard({ product }) {
   return (
-    <div className="card">
-      <Image src={product.imageUrl} alt={product.title} className="card-img-top" />
-      <div className="card-body">
+    <Card>
+      <CardImg top src={product.imageUrl} alt={product.title} />
+      <CardBody>
         <h5>
           <TextBox>
             {product.title}
           </TextBox>
         </h5>
-        <div className="card-text">
+        <CardText>
           <Price amount={product.price} />
-        </div>
-      </div>
-    </div>
+        </CardText>
+        <ProductAddButton product={product} />
+      </CardBody>
+    </Card>
   );
 }
+
+ProductCard.propTypes = {
+  product: productPropType.isRequired,
+};
 
 export default ProductCard;
