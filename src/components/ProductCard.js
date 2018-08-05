@@ -4,7 +4,7 @@ import { Card, CardBody, CardText, CardImg } from 'reactstrap';
 import { productPropType } from '../constants/propTypes';
 import Price from './Price';
 import TextBox from './TextBox';
-import ProductAddButton from './ProductAddButton';
+import AddProductToCart from '../containers/AddProductToCart';
 
 function ProductCard({ product }) {
   return (
@@ -19,7 +19,7 @@ function ProductCard({ product }) {
         <CardText>
           <Price amount={product.price} />
         </CardText>
-        <ProductAddButton product={product} />
+        <AddProductToCart product={product} />
       </CardBody>
     </Card>
   );
