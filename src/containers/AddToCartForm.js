@@ -4,7 +4,7 @@ import { Form, FormGroup, Input, Button } from 'reactstrap';
 import { productPropType } from '../constants/propTypes';
 import { CartContextConsumer } from './CartProvider';
 
-class AddProductToCart extends Component {
+class AddToCartForm extends Component {
   constructor(props) {
     super(props);
 
@@ -58,8 +58,8 @@ class AddProductToCart extends Component {
   }
 }
 
-AddProductToCart.propTypes = {
+AddToCartForm.propTypes = {
   product: productPropType.isRequired,
 };
 
-export default AddProductToCart;
+export default AddToCartForm;
