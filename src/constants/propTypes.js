@@ -4,7 +4,8 @@ export const productPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  imageUrl: PropTypes.string,
+  description: PropTypes.string,
+  gallery: PropTypes.arrayOf(PropTypes.string),
 });
 
 export const cartItemPropType = PropTypes.shape({
