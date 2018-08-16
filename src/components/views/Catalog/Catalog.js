@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CardDeck } from 'reactstrap';
 
 import { productPropType } from '../../../constants/propTypes';
-import ProductCard from '../../shared/ProductCard';
+import ProductCard from './ProductCard';
 
 const Catalog = ({ products }) => (
   <CardDeck>

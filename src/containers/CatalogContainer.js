@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import productItems from '../constants/products';
+import getProducts from '../api';
 import Catalog from '../components/views/Catalog/Catalog';
 
 class CatalogContainer extends Component {
@@ -13,7 +13,7 @@ class CatalogContainer extends Component {
   }
 
   componentDidMount() {
-    this.setState({ products: productItems });
+    getProducts().then(products => this.setState({ products }));
   }
 
   render() {

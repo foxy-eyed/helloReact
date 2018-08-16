@@ -1,23 +1,7 @@
-import React, { Fragment } from 'react';
-import { find } from 'lodash/collection';
-import { Row, Col } from 'reactstrap';
+import React from 'react';
 
-import productItems from '../../../constants/products';
-import ProductCard from '../../shared/ProductCard';
+import ProductContainer from '../../../containers/ProductContainer';
 
-export default ({ match: { params } }) => {
-  const product = find(productItems, item => item.id === parseInt(params.id, 10));
-
-  return (
-    <Fragment>
-      <h1>
-        {product.title}
-      </h1>
-      <Row>
-        <Col md="6">
-          <ProductCard product={product} />
-        </Col>
-      </Row>
-    </Fragment>
-  );
-};
+export default ({ match: { params } }) => (
+  <ProductContainer productId={params.id} />
+);

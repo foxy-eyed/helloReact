@@ -9,7 +9,7 @@ import AddToCartForm from '../../../containers/AddToCartForm';
 
 const ProductCard = ({ product }) => (
   <Card>
-    <CardImg top src={product.imageUrl} alt={product.title} />
+    <CardImg top src={product.gallery[0]} alt={product.title} />
     <CardBody>
       <h5>
         <Link
