@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import getProducts from '../api';
-import Catalog from '../components/views/Catalog/Catalog';
+import getProducts from '~/src/api';
+import Catalog from '~/src/components/views/Catalog/Catalog';
 
 class CatalogContainer extends Component {
   constructor(props) {

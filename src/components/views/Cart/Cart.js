@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter } from 'reactstrap';
 
-import CartItem from './CartItem';
-import CartTotals from './CartTotals';
+import CartItem from '~/src/components/views/Cart/CartItem';
+import CartTotals from '~/src/components/views/Cart/CartTotals';
 
 export default ({ items, totalCount, totalSum }) => (
   <Card className="my-4">

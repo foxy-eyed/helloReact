@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { Row, Col } from 'reactstrap';
 
-import { productPropType } from '../../../constants/propTypes';
-import Options from './Options';
-import ImageGallery from '../../../containers/ImageGallery';
-import AddToCartForm from '../../../containers/AddToCartForm';
+import { productPropType } from '~/src/constants/propTypes';
+import Options from '~/src/components/views/Product/Options';
+import ImageGallery from '~/src/containers/ImageGallery';
+import AddToCartForm from '~/src/containers/AddToCartForm';
 
 const DetailedView = ({ product }) => (
   <Fragment>

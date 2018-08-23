@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { Container, Row } from 'reactstrap';
 
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Main from './Main';
-import Menu from './Menu';
+import Header from '~/src/components/views/Layout/Header';
+import Sidebar from '~/src/components/views/Layout/Sidebar';
+import Main from '~/src/components/views/Layout/Main';
+import Menu from '~/src/components/views/Layout/Menu';
 
 export default ({ children }) => (
   <Fragment>

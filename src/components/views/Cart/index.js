@@ -1,6 +1,6 @@
 import React from 'react';
-import { CartContextConsumer } from '../../../containers/CartProvider';
-import Cart from './Cart';
+import { CartContextConsumer } from '~/src/containers/CartProvider';
+import Cart from '~/src/components/views/Cart/Cart';
 
 export default () => (
   <CartContextConsumer>

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { find } from 'lodash/collection';
 import { isEmpty } from 'lodash/lang';
 
-import getProducts from '../api';
-import DetailedView from '../components/views/Product/DetailedView';
-
+import getProducts from '~/src/api';
+import DetailedView from '~/src/components/views/Product/DetailedView';
 
 class ProductContainer extends Component {
   constructor(props) {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, CardBody, CardText, CardImg } from 'reactstrap';
 
-import { productPropType } from '../../../constants/propTypes';
-import Price from '../../elements/Price';
-import Link from '../../elements/Link';
-import { productPath } from '../../../helpers/routes';
-import AddToCartForm from '../../../containers/AddToCartForm';
+import { productPropType } from '~/src/constants/propTypes';
+import Price from '~/src/components/elements/Price';
+import Link from '~/src/components/elements/Link';
+import { productPath } from '~/src/helpers/routes';
+import AddToCartForm from '~/src/containers/AddToCartForm';
 
 const ProductCard = ({ product }) => (
   <Card>

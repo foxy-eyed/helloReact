@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Item from './Item';
+import Item from '~/src/containers/ImageGallery/Item';
 
 class ImageGallery extends Component {
   constructor(props) {
