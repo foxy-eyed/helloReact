@@ -1,7 +1,7 @@
-import CartRoute from './CartRoute';
-import ContactRoute from './ContactRoute';
-import NoMatch from './NoMatchRoute';
-import ProductRoute from './ProductRoute';
-import RootRoute from './RootRoute';
+import CartRoute from '~/src/routes/CartRoute';
+import ContactRoute from '~/src/routes/ContactRoute';
+import NoMatch from '~/src/routes/NoMatchRoute';
+import ProductRoute from '~/src/routes/ProductRoute';
+import RootRoute from '~/src/routes/RootRoute';
 
 export default [CartRoute, ContactRoute, ProductRoute, RootRoute, NoMatch];

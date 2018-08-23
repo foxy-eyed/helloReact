@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import CatalogContainer from '../../../containers/CatalogContainer';
+import CatalogContainer from '~/src/containers/CatalogContainer';
 
 export default () => (
   <Fragment>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { cartItemPropType } from '../../../constants/propTypes';
-import Price from '../../elements/Price';
-import TextBox from '../../elements/TextBox';
+import { cartItemPropType } from '~/src/constants/propTypes';
+import Price from '~/src/components/elements/Price';
+import TextBox from '~/src/components/elements/TextBox';
 
 const CartItem = ({ product: { title, quantity, totalPrice } }) => (
   <div>

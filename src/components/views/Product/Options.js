@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { productPropType } from '../../../constants/propTypes';
-import Price from '../../elements/Price';
+import { productPropType } from '~/src/constants/propTypes';
+import Price from '~/src/components/elements/Price';
 
 const Options = ({ product }) => (
   <dl className="row">

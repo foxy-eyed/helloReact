@@ -1,5 +1,5 @@
-import { productPath } from '../helpers/routes';
-import ProductPage from '../components/views/Product';
+import { productPath } from '~/src/helpers/routes';
+import ProductPage from '~/src/components/views/Product';
 
 export default {
   path: productPath(),

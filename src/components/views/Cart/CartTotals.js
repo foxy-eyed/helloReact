@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Price from '../../elements/Price';
+import Price from '~/src/components/elements/Price';
 
 const CartTotals = ({ count, sum }) => (
   <Fragment>

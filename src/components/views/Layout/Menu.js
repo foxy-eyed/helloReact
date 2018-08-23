@@ -1,8 +1,8 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
 
-import NavLink from '../../elements/NavLink';
-import { cartPath, contactPath, rootPath } from '../../../helpers/routes';
+import NavLink from '~/src/components/elements/NavLink';
+import { cartPath, contactPath, rootPath } from '~/src/helpers/routes';
 
 export default () => (
   <Nav vertical className="nav-pills my-4">

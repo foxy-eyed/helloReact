@@ -1,4 +1,4 @@
-import NoMatchPage from '../components/views/NoMatch';
+import NoMatchPage from '~/src/components/views/NoMatch';
 
 export default {
   component: NoMatchPage,

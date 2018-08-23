@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CardDeck } from 'reactstrap';
 
-import { productPropType } from '../../../constants/propTypes';
-import ProductCard from './ProductCard';
+import { productPropType } from '~/src/constants/propTypes';
+import ProductCard from '~/src/components/views/Catalog/ProductCard';
 
 const Catalog = ({ products }) => (
   <CardDeck>

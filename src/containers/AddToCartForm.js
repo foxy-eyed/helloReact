@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Input, Button } from 'reactstrap';
 
-import { productPropType } from '../constants/propTypes';
-import { CartContextConsumer } from './CartProvider';
+import { productPropType } from '~/src/constants/propTypes';
+import { CartContextConsumer } from '~/src/containers/CartProvider';
 
 class AddToCartForm extends Component {
   constructor(props) {

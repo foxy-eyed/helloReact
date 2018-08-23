@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import Link from '../../elements/Link';
-import { rootPath } from '../../../helpers/routes';
+import Link from '~/src/components/elements/Link';
+import { rootPath } from '~/src/helpers/routes';
 
 export default () => (
   <Fragment>
