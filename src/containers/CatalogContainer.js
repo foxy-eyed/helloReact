@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import getProducts from '~/src/api';
+import fetchProductsRequest from '~/src/actions/catalog';
 import Catalog from '~/src/components/views/Catalog/Catalog';
 
 class CatalogContainer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      products: [],
-    };
-  }
-
   componentDidMount() {
-    getProducts().then(products => this.setState({ products }));
+    const { props } = this;
+    props.fetchProducts();
   }
 
   render() {
-    const { products } = this.state;
+    const { products } = this.props;
     return (
       <Catalog products={products} />
     );
   }
 }
 
-export default CatalogContainer;
+const mapStateToProps = state => (
+  {
+    products: state.catalog.products,
+  }
+);
+
+const mapDispatchToProps = dispatch => (
+  {
+    fetchProducts() {
+      dispatch(fetchProductsRequest());
+    },
+  }
+);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(CatalogContainer);
