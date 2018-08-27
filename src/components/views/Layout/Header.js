@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from 'reactstrap';
 
 import Link from '~/src/components/elements/Link';
-import CartButton from '~/src/components/views/Layout/CartButton';
+import CartButtonContainer from '~/src/containers/CartButtonContainer';
 import { rootPath } from '~/src/helpers/routes';
 
 export default () => (
@@ -15,6 +15,6 @@ export default () => (
         Healthy Food Shop
       </span>
     </Link>
-    <CartButton />
+    <CartButtonContainer />
   </Navbar>
 );

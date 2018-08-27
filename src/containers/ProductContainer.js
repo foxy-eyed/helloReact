@@ -1,31 +1,15 @@
-import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { find } from 'lodash/collection';
-import { isEmpty } from 'lodash/lang';
 
-import getProducts from '~/src/api';
 import DetailedView from '~/src/components/views/Product/DetailedView';
 
-class ProductContainer extends Component {
-  constructor(props) {
-    super(props);
+const mapStateToProps = (state, ownProps) => {
+  const { products } = state.catalog;
+  return (
+    {
+      product: find(products, product => product.id === parseInt(ownProps.productId, 10)),
+    }
+  );
+};
 
-    this.state = {
-      product: {},
-    };
-  }
-
-  componentDidMount() {
-    const { productId } = this.props;
-
-    getProducts()
-      .then(products => find(products, product => product.id === parseInt(productId, 10)))
-      .then(product => this.setState({ product }));
-  }
-
-  render() {
-    const { product } = this.state;
-    return isEmpty(product) ? 'Loading' : <DetailedView product={product} />
-  }
-}
-
-export default ProductContainer;
+export default connect(mapStateToProps)(DetailedView);

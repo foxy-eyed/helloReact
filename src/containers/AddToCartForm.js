@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Form, FormGroup, Input, Button } from 'reactstrap';
 
 import { productPropType } from '~/src/constants/propTypes';
-import { CartContextConsumer } from '~/src/containers/CartProvider';
+import addToCart from '~/src/actions/cart';
 
 class AddToCartForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      product: props.product,
       quantity: 1,
     };
 
@@ -24,36 +24,33 @@ class AddToCartForm extends Component {
   }
 
   render() {
-    const { product, quantity } = this.state;
+    const { quantity } = this.state;
+    const { product, handleSubmit } = this.props;
 
     return (
-      <CartContextConsumer>
-        {({ addToCart }) => (
-          <Form
-            onSubmit={(e) => {
-              e.preventDefault();
-              addToCart(product, quantity);
-            }}
-          >
-            <div className="form-row">
-              <FormGroup className="col-md-6">
-                <Input
-                  type="number"
-                  name="quantity"
-                  value={quantity}
-                  onChange={this.handleChangeQuantity}
-                  required
-                />
-              </FormGroup>
-              <FormGroup className="col-md-6">
-                <Button color="success">
-                  Add
-                </Button>
-              </FormGroup>
-            </div>
-          </Form>
-        )}
-      </CartContextConsumer>
+      <Form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit(product, quantity);
+        }}
+      >
+        <div className="form-row">
+          <FormGroup className="col-md-6">
+            <Input
+              type="number"
+              name="quantity"
+              value={quantity}
+              onChange={this.handleChangeQuantity}
+              required
+            />
+          </FormGroup>
+          <FormGroup className="col-md-6">
+            <Button color="success">
+              Add
+            </Button>
+          </FormGroup>
+        </div>
+      </Form>
     );
   }
 }
@@ -62,4 +59,12 @@ AddToCartForm.propTypes = {
   product: productPropType.isRequired,
 };
 
-export default AddToCartForm;
+const mapDispatchToProps = dispatch => (
+  {
+    handleSubmit(product, quantity) {
+      dispatch(addToCart(product, quantity));
+    },
+  }
+);
+
+export default connect(null, mapDispatchToProps)(AddToCartForm);
