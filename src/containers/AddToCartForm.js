@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Form, FormGroup, Input, Button } from 'reactstrap';
 
 import { productPropType } from '~/src/constants/propTypes';
-import addToCart from '~/src/actions/cart';
+import { addToCart } from '~/src/actions/cart';
 
 class AddToCartForm extends Component {
   constructor(props) {

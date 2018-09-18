@@ -23,8 +23,12 @@ const addProductToCart = (cartContent, product, quantity) => {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case actionTypes.INIT_CART:
+      return { items: action.items, isLoaded: action.isLoaded };
     case actionTypes.ADD_TO_CART:
       return { items: addProductToCart(state.items, action.product, action.quantity) };
+    case actionTypes.CLEAR_CART:
+      return INITIAL_STATE;
     default:
       return state;
   }
