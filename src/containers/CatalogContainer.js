@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import fetchProductsRequest from '~/src/actions/catalog';
+import fetchProducts from '~/src/actions/catalog';
 import Catalog from '~/src/components/views/Catalog/Catalog';
 
 class CatalogContainer extends Component {
@@ -27,7 +27,7 @@ const mapStateToProps = state => (
 const mapDispatchToProps = dispatch => (
   {
     fetchProducts() {
-      dispatch(fetchProductsRequest());
+      dispatch(fetchProducts());
     },
   }
 );
