@@ -1,5 +1,5 @@
 import * as actionTypes from '~/src/constants/actionTypes';
-import parseProducts from '~src/helpers/productsParser';
+import parseProducts from '~/src/helpers/productsParser';
 
 const INITIAL_STATE = {
   products: [],
